@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Code2, CoffeeIcon, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
 import OpenAI from 'openai';
+import { Analytics } from "@vercel/analytics/react"
 import CodeEditor from './code-editor';
 
 const languages = ['JavaScript', 'Python', 'Java', 'C++', 'Ruby'];
@@ -141,6 +142,7 @@ export default function AICodeConverter() {
           </button>
         </div>
       </footer>
+      <Analytics />
     </div>
   );
 }
